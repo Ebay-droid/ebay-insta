@@ -64,7 +64,7 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 INSTALLED_APPS = [
     'tinymce',
-    'intaclone',
+    'instaclone',
     'bootstrap4',
     'cloudinary',
     'django.contrib.admin',
