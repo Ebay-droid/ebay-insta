@@ -11,3 +11,10 @@ class CommentForm(forms.ModelForm):
    model = Comment
    exclude = ['post','user']
    
+class ProfileForm(forms.ModelForm):
+  bio= forms.CharField(widget=forms.TextInput(), max_length=260, required=False)
+  profile_photo= forms.ImageField(required=False)
+  
+  class Meta:
+    model = Profile
+    exclude = ['user']

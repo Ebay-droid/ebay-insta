@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect,get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 from .email import send_welcome_email
-from .forms import PostForm, CommentForm
+from .forms import PostForm, CommentForm, ProfileForm
 from .models import *
 from django.urls import  reverse
 from django.http import HttpResponse, HttpResponseRedirect
@@ -120,7 +120,7 @@ def update_profile(request,username):
     else:
       form = ProfileForm()  
     
-  return render(request, 'new_profile.html',{'user':user,'form':ProfileForm})  
+  return render(request, 'new_profile.html',{'user':user, 'form':ProfileForm})  
 
 @login_required
 def search_results(request):
